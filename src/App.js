@@ -43,7 +43,8 @@ class App extends Component {
       friendsUpdated[indexClicked].clicked = "true"
       this.setState({
         score: score += 1, 
-        friends: friendsUpdated
+        friends: friendsUpdated,
+        roundResult: "You got it Right!"
       })
     }
     else{
@@ -54,13 +55,15 @@ class App extends Component {
         this.setState({
           topScore: this.state.score,
           score: 0,
-          friends: this.shuffle(newfriends)
+          friends: this.shuffle(newfriends),
+          roundResult:  "Congraduation! New Top Score!"
         })
       }
       else{
         this.setState({
           score: 0,
-          friends: this.shuffle(newfriends)
+          friends: this.shuffle(newfriends),
+          roundResult: "You just lost, keep on trying!"
         })
       }
     }
