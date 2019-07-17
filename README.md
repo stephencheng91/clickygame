@@ -1,1 +1,1 @@
-# clickygame
+# Sponge Bob Clicky Game
